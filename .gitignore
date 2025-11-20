@@ -1,0 +1,24 @@
+# Odoo
+*.pyc
+__pycache__/
+.DS_Store
+*.log
+
+# Docker
+odoo-web-data/
+odoo-db-data/
+
+# Backups
+backups/*.sql
+backups/*.tar.gz
+
+# Environment
+.env.local
+config/odoo.conf.local
+
+# OCA modules (tracked separately)
+oca/*/
+!oca/requirements.txt
+
+# misc.
+note.md
