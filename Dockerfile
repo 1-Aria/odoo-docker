@@ -7,11 +7,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy OCA modules and install their Python dependencies
-COPY ./oca /mnt/oca-addons
-RUN find /mnt/oca-addons -name 'requirements.txt' | while read req; do \
-        echo "Installing from $req"; \
-        pip3 install --break-system-packages --no-cache-dir -r "$req" || exit 1; \
-    done
+# install dependencies from requirements.txt (master list)
+COPY requirements.txt /tmp/requirements.txt
+RUN pip3 install --break-system-packages --no-cache-dir -r /tmp/requirements.txt \
+    || (echo "❌ Pip install failed for /tmp/requirements.txt" && exit 1)
 
 USER odoo

@@ -21,4 +21,4 @@ oca/*/
 !oca/requirements.txt
 
 # misc.
-note.md
+.env
