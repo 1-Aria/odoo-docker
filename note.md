@@ -1,3 +1,9 @@
+docker
+gitbash
+nodejs
+python
+pip3
+
 🐳 Container Management
 docker run -d --name mycontainer imagename → Run a container in detached mode
 
@@ -35,7 +41,7 @@ docker network ls → List networks
 docker network inspect mynetwork → Inspect a network
 
 🛠️ Utilities
-docker logs -f odoo19_web
+docker logs -f odoo-docker-odoo-1
 
 docker logs mycontainer → View container logs
 
@@ -54,6 +60,17 @@ docker compose build → Build/rebuild services
 
 docker compose logs -f → Follow logs for all services
 
+set wsl resource:
+.wslconfig
+[wsl2]
+memory=6GB
+processors=4
+
+[ -d "oca/server-tools/.git" ] && echo "Exists" || echo "Does not exist"
+
+[ -f "oca/server-tools/requirements.txt" ] && echo "Exists" || echo "Does not exist"
+
+make data base?
 docker compose run --rm web odoo -i base -d odoo_db --stop-after-init
 
 docker restart odoo-docker-odoo-1
@@ -80,6 +97,7 @@ pip3 show
 pip3 list
 
 git clone -b 18.0 https://github.com/OCA/account-reconcile.git oca/account-reconcile
+git clone -b 18.0 https://github.com/OCA/knowledge.git oca/knowledge
 
 update modules list
 docker compose exec odoo odoo -d <your-db-name> -u base --stop-after-init
@@ -88,3 +106,8 @@ docker compose exec odoo odoo -d odoo-db -u base --stop-after-init
 install module
 docker compose exec odoo odoo -d <your-db-name> -i <module-technical-name> --stop-after-init
 docker compose exec odoo odoo -d odoo-db -i document_knowledge --stop-after-init
+
+P2P, O2C, R2R, P2Pr
+Q2C, H2R, A2R, F2D
+
+Branch No. 1 of Quang Phuong Co., Ltd.

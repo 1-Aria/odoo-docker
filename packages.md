@@ -52,3 +52,15 @@ document_knowledge
 --- conflicts
 enterprise account
 purchase_payment
+
+--- base
+mail
+account
+contacts
+calendar
+sale_management
+crm
+stock
+purchase
+project
+mrp
