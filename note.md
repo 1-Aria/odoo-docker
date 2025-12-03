@@ -96,8 +96,13 @@ check dependencies
 pip3 show
 pip3 list
 
-git clone -b 18.0 https://github.com/OCA/account-reconcile.git oca/account-reconcile
-git clone -b 18.0 https://github.com/OCA/knowledge.git oca/knowledge
+git clone -b 18.0 https://github.com/OCA/product-attribute.git oca/product-attribute
+
+git clone -b 18.0 https://github.com/HeliconiaIO/stock-logistics-workflow/tree/refs/heads/18.0-mig-stock_account_show_automatic_valuation.git oca/stock-logistics-workflow-HeliconiaIO
+
+git clone https://github.com/HeliconiaIO/stock-logistics-workflow/tree/refs/heads/18.0-mig-stock_account_show_automatic_valuation.git -b 18.0-mig-stock_account_show_automatic_valuation
+
+git clone https://github.com/HeliconiaIO/stock-logistics-workflow.git -b 18.0-mig-stock_account_show_automatic_valuation
 
 update modules list
 docker compose exec odoo odoo -d <your-db-name> -u base --stop-after-init
@@ -110,4 +115,20 @@ docker compose exec odoo odoo -d odoo-db -i document_knowledge --stop-after-init
 P2P, O2C, R2R, P2Pr
 Q2C, H2R, A2R, F2D
 
+configure multi company (multicompany, intercompany transactions?)
 Branch No. 1 of Quang Phuong Co., Ltd.
+
+
+configure journals
+configure payment method
+configure payment mode
+
+configure vat asset tax
+
+enable inventory setting (varian, uom)
+
+configure product category
+configure variant/ attribute
+
+make products
+(config product sku?)

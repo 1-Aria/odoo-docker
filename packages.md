@@ -48,6 +48,8 @@ account_budget_oca
 # in knowledge
 document_knowledge
 
+# in stock-logistics-workflow-HeliconiaIO
+stock_account_show_automatic_valuation
 
 --- conflicts
 enterprise account
@@ -64,3 +66,13 @@ stock
 purchase
 project
 mrp
+
+employees
+expenses
+(timeoff)
+(recruitment)
+(attendances)
+(employee contracts)
+maintenance
+(Website)
+
