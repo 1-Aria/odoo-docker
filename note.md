@@ -118,7 +118,7 @@ Q2C, H2R, A2R, F2D
 configure multi company (multicompany, intercompany transactions?)
 Branch No. 1 of Quang Phuong Co., Ltd.
 
-
+configure accounting settings
 configure journals
 configure payment method
 configure payment mode
@@ -130,5 +130,10 @@ enable inventory setting (varian, uom)
 configure product category
 configure variant/ attribute
 
+configure assets
+
 make products
 (config product sku?)
+
+configure purchase setting
+configure sale setting
