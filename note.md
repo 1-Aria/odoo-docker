@@ -127,6 +127,7 @@ configure vat asset tax
 
 enable inventory setting (varian, uom)
 
+(need product code generator)
 configure product category
 configure variant/ attribute
 

@@ -51,6 +51,9 @@ document_knowledge
 # in stock-logistics-workflow-HeliconiaIO
 stock_account_show_automatic_valuation
 
+# in product-attribute
+product_sequence
+
 --- conflicts
 enterprise account
 purchase_payment
