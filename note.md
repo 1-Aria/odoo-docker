@@ -85,6 +85,8 @@ docker compose build --progress=plain
 
 docker compose build --no-cache --progress=plain
 
+docker compose up -d
+
 check addon path
 docker exec -it odoo-docker-odoo-1 ls /mnt/oca-addons
 docker exec -it odoo-docker-odoo-1 ls /mnt/oca-addons/account-financial-tools
@@ -96,7 +98,45 @@ check dependencies
 pip3 show
 pip3 list
 
-git clone -b 18.0 https://github.com/OCA/product-attribute.git oca/product-attribute
+FROM odoo:18.0
+
+USER root
+
+# Install system dependencies if needed (example for common OCA modules)
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# install dependencies from requirements.txt (master list)
+COPY requirements.txt /tmp/requirements.txt
+RUN python3 -m pip install --break-system-packages --no-cache-dir -r /tmp/requirements.txt \
+    || (echo "❌ Pip install failed for /tmp/requirements.txt" && exit 1)
+
+USER odoo
+
+FROM odoo:18.0
+
+USER root
+
+# Install system dependencies (apt packages)
+RUN apt-get update && apt-get install -y python3-venv python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a virtual environment
+RUN python3 -m venv /opt/venv
+
+# Ensure venv is used by default
+ENV PATH="/opt/venv/bin:$PATH"
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
+# Copy requirements and install with venv's pip
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt \
+    || (echo "❌ Pip install failed for /tmp/requirements.txt" && exit 1)
+
+USER odoo
+
+git clone -b 18.0 https://github.com/OCA/commission.git oca/commission
 
 git clone -b 18.0 https://github.com/HeliconiaIO/stock-logistics-workflow/tree/refs/heads/18.0-mig-stock_account_show_automatic_valuation.git oca/stock-logistics-workflow-HeliconiaIO
 
@@ -117,6 +157,11 @@ Q2C, H2R, A2R, F2D
 
 configure multi company (multicompany, intercompany transactions?)
 Branch No. 1 of Quang Phuong Co., Ltd.
+
+COA configure
+interim accounts
+turn on reconciliation (bank suspense, etc.)
+3387 account
 
 configure accounting settings
 configure journals

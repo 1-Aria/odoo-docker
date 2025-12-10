@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 # install dependencies from requirements.txt (master list)
 COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install --break-system-packages --no-cache-dir -r /tmp/requirements.txt \
+RUN python3 -m pip install --break-system-packages --no-cache-dir -r /tmp/requirements.txt \
     || (echo "❌ Pip install failed for /tmp/requirements.txt" && exit 1)
 
 USER odoo

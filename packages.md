@@ -12,6 +12,8 @@ account
 
 # in server-tools
 auditlog
+module_auto_update
+auto_backup
 
 # in account-reconcile
 account_in_payment
@@ -48,11 +50,17 @@ account_budget_oca
 # in knowledge
 document_knowledge
 
-# in stock-logistics-workflow-HeliconiaIO
+# in stock-logistics-workflow
 stock_account_show_automatic_valuation
 
 # in product-attribute
 product_sequence
+
+# in commission
+commission_oca
+account_commission_oca
+sale_commission_oca
+
 
 --- conflicts
 enterprise account
