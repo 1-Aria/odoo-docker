@@ -9,6 +9,7 @@ services:
       - POSTGRES_USER=odoo
     volumes:
       - odoo-db-data:/var/lib/postgresql/data
+      #- ./backups:/var/lib/odoo/.local/share/Odoo/backups
     restart: unless-stopped
     networks:
       - odoo-network

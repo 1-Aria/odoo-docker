@@ -165,6 +165,7 @@ turn on reconciliation (bank suspense, etc.)
 
 configure accounting settings
 configure journals
+add outstanding accounts (odoo 18+)
 configure payment method
 configure payment mode
 
@@ -173,7 +174,8 @@ configure vat asset tax
 enable inventory setting (varian, uom)
 
 (need product code generator)
-configure product category
+***configure product category
+- make exclusive products for each company??
 configure variant/ attribute
 
 configure assets
