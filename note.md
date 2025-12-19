@@ -157,6 +157,7 @@ Q2C, H2R, A2R, F2D
 
 configure multi company (multicompany, intercompany transactions?)
 Branch No. 1 of Quang Phuong Co., Ltd.
+configure language, date
 
 COA configure
 interim accounts
@@ -168,6 +169,7 @@ configure journals
 add outstanding accounts (odoo 18+)
 configure payment method
 configure payment mode
+configure payment order, bank statements, import, export
 
 configure vat asset tax
 

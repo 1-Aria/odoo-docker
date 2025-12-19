@@ -14,6 +14,7 @@ account
 auditlog
 module_auto_update
 auto_backup
+excel_import_export
 
 # in account-reconcile
 account_in_payment
@@ -35,15 +36,13 @@ account_payment_order
 base_iban
 account_payment_purchase (auto)
 account_payment_sale (auto)
-account_banking_pain_base
-account_banking_sepa_credit_transfer
+
 
 
 # in bank-statement-import
 account_statement_import_base
 account_statement_import_file
-account_statement_import_camt
-
+account_statement_import_sheet_file
 
 # in account-financial-reporting
 account_financial_report

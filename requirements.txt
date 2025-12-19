@@ -3,3 +3,4 @@ python-dateutil
 paramiko<4.0.0
 pysftp
 cryptography
+openpyxl
