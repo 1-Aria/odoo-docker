@@ -136,7 +136,7 @@ RUN pip install --no-cache-dir -r /tmp/requirements.txt \
 
 USER odoo
 
-git clone -b 18.0 https://github.com/OCA/commission.git oca/commission
+git clone -b 18.0 https://github.com/OCA/stock-logistics-warehouse.git oca/stock-logistics-warehouse
 
 git clone -b 18.0 https://github.com/HeliconiaIO/stock-logistics-workflow/tree/refs/heads/18.0-mig-stock_account_show_automatic_valuation.git oca/stock-logistics-workflow-HeliconiaIO
 
@@ -187,3 +187,5 @@ make products
 
 configure purchase setting
 configure sale setting
+configure inventory setting
+configure manufacturing setting

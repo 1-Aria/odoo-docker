@@ -3,7 +3,7 @@ account_usability
 account_journal_lock_date
 account_lock_date_update
 
-# ----- dependency python-dateutil
+--- dependency python-dateutil
 
 account_asset_management
 # in reporting-engine
@@ -65,6 +65,16 @@ commission_oca
 account_commission_oca
 sale_commission_oca
 
+# in manufacture
+mrp_warehouse_calendar
+mrp_multi_level
+mrp_multi_level_estimate
+quality_control_oca
+quality_control_stock_oca
+(quality_control_mrp_oca) - pending
+
+# in stock-logistics-warehouse
+stock_demand_estimate
 
 --- conflicts
 enterprise account
